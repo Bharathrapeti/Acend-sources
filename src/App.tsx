@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ActiveTab, Task } from './types';
-import { INITIAL_TASKS } from './data/initialData';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
 import { DashboardView } from './components/DashboardView';
@@ -14,7 +13,7 @@ import { AuthModal } from './components/AuthModal';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
-  const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [isNewTaskOpen, setIsNewTaskOpen] = useState(false);
   const [isLandingOpen, setIsLandingOpen] = useState(false);
@@ -32,6 +31,16 @@ export default function App() {
   // Focus Timer State (Default: 02:44:12 = 9852 seconds)
   const [focusSeconds, setFocusSeconds] = useState(9852);
   const [isFocusRunning, setIsFocusRunning] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/tasks')
+      .then((response) => {
+        if (!response.ok) throw new Error('Could not load tasks');
+        return response.json() as Promise<Task[]>;
+      })
+      .then(setTasks)
+      .catch((error) => console.error(error));
+  }, []);
 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
@@ -86,29 +95,33 @@ export default function App() {
     setSelectedTask(null);
   };
 
-  const handleUpdateTask = (updatedTask: Task) => {
-    setTasks((prev) => prev.map((t) => (t.id === updatedTask.id ? updatedTask : t)));
-    setSelectedTask(updatedTask);
+  const handleUpdateTask = async (updatedTask: Task) => {
+    const response = await fetch(`/api/tasks/${encodeURIComponent(updatedTask.id)}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedTask),
+    });
+    if (!response.ok) throw new Error('Could not update task');
+
+    const savedTask = await response.json() as Task;
+    setTasks((prev) => prev.map((task) => task.id === savedTask.id ? savedTask : task));
+    setSelectedTask(savedTask);
   };
 
   const handleToggleTaskComplete = (taskId: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    setTasks((prev) =>
-      prev.map((t) => {
-        if (t.id === taskId) {
-          const isDone = t.status === 'Completed';
-          return {
-            ...t,
-            status: isDone ? 'In Progress' : 'Completed',
-            progressPercent: isDone ? 50 : 100,
-          };
-        }
-        return t;
-      })
-    );
+    const task = tasks.find((item) => item.id === taskId);
+    if (!task) return;
+
+    const isDone = task.status === 'Completed';
+    void handleUpdateTask({
+      ...task,
+      status: isDone ? 'In Progress' : 'Completed',
+      progressPercent: isDone ? 50 : 100,
+    }).catch((error) => console.error(error));
   };
 
-  const handleCreateTask = (newTaskData: Partial<Task>) => {
+  const handleCreateTask = async (newTaskData: Partial<Task>) => {
     const newTask: Task = {
       id: `task-${Date.now()}`,
       title: newTaskData.title || 'New Initiative',
@@ -126,7 +139,15 @@ export default function App() {
       progressPercent: 0,
     };
 
-    setTasks((prev) => [newTask, ...prev]);
+    const response = await fetch('/api/tasks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newTask),
+    });
+    if (!response.ok) throw new Error('Could not create task');
+
+    const savedTask = await response.json() as Task;
+    setTasks((prev) => [savedTask, ...prev]);
   };
 
   // When changing tabs, clear selected detail task to show the main tab view

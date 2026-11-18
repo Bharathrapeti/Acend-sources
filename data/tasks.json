@@ -1,0 +1,306 @@
+[
+  {
+    "id": "task-1",
+    "title": "Design System Update",
+    "description": "Review and align the core design tokens to match the updated kinetic brand identity. Focus on high-contrast surfaces and fluid motion states.",
+    "project": "PROJECT ALPHA",
+    "category": "Task Deep-Dive",
+    "priority": "HIGH",
+    "status": "In Progress",
+    "dueDate": "Oct 24",
+    "dueTime": "5:30 PM",
+    "progressPercent": 68,
+    "isUrgent": false,
+    "subtasks": [
+      {
+        "id": "st-1",
+        "title": "Audit existing color tokens",
+        "completed": true
+      },
+      {
+        "id": "st-2",
+        "title": "Implement Glassmorphism variables",
+        "completed": true
+      },
+      {
+        "id": "st-3",
+        "title": "Typography Scale Refresh",
+        "completed": true
+      },
+      {
+        "id": "st-4",
+        "title": "Update elevation tiers for glassmorphic cards",
+        "completed": true
+      },
+      {
+        "id": "st-5",
+        "title": "Component Library Migration",
+        "completed": false
+      },
+      {
+        "id": "st-6",
+        "title": "Update documentation site",
+        "completed": false
+      }
+    ],
+    "attachments": [
+      {
+        "id": "att-1",
+        "name": "Specs_v4.pdf",
+        "size": "1.2 MB",
+        "type": "pdf"
+      },
+      {
+        "id": "att-2",
+        "name": "Moodboard.png",
+        "size": "4.8 MB",
+        "type": "image",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAWT_ZjOg673RAG6Erm-EJdOERmucfPT9DwIwS-c6dANHWMUvrBnlFBsbE5KjNvfXmi5N7BlEBACPCWnj89HTkdl5BS3plSbRPZMFVRo4s5VjnKmokYG3pYE_NEvTduw7LmWbPR-74OHVzR64gJZZZJ2_2Lxs73LknO8diBg-_hXrNCsJerBFTCc4cvxAgxsQWJa3jV9KPFfFU5KX6ErB1OZTL0Vugw4Rpx657jiuD5UHbYHUw4jtCiCfO8iUUtyWweQ8UIH9Furr9L"
+      },
+      {
+        "id": "att-3",
+        "name": "Styleguide.pdf",
+        "size": "2.1 MB",
+        "type": "pdf"
+      },
+      {
+        "id": "att-4",
+        "name": "Layout_V2.png",
+        "size": "3.4 MB",
+        "type": "image",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBJ7BmgcT8ELm1Cq79W0gqfHl7lhTKPiU1lUbflEEXodiS2ZpK78GaZGQ3gkXe74z0pkk17pe42uiZ5onlwCzoQZxGEKFSd4vonIpUkeI0Yg3smKkHdpj3e808OyNr5exLmJqwzb08t4ByyUX85gIHHQZ3kQBmkRApa1qY21VddzrTZ3ZEwOScAFME37ImEloCieBpa9VSfDOaxDFVyFq2aG-d-PC7GeZ80e1puXZEvPHuPqdxGXg8T5wFov2n3gKaBAEbCRAUXgt04"
+      }
+    ],
+    "comments": [
+      {
+        "id": "c-1",
+        "author": "Alex R.",
+        "avatar": "https://lh3.googleusercontent.com/aida/AP1WRLu1qPnrNIRlcoJljI43EI2Q2pf2udFhnjuTuIBpJ6M77oZAvrDSct0UuJPJB-VVn1XmwoCYgbHGFmk661T5NTm7QM5QPauqmEeBwi98hfPFaead6L5xiF9XJfIGlWi8acebXHeP43mJyIcu3ihJoLiSIH6TD-FKJS6SzT9cThqhGI1i6QROwowdjeNbyLt8iyQbGiM5BhKcUkdBGw7KYycB7KwkZzgkbW2LzvaUQ63RINJ1Z5jms4mu5SIZ",
+        "text": "Color palette audit is 100% complete! Moving on to component variables.",
+        "timestamp": "10m ago"
+      },
+      {
+        "id": "c-2",
+        "author": "Sarah K.",
+        "avatar": "https://lh3.googleusercontent.com/aida/AP1WRLtzS8T0wP_R7R_9nK9zQ8",
+        "text": "Checked the high contrast tokens on mobile safari, looks crisp!",
+        "timestamp": "1h ago"
+      }
+    ],
+    "collaborators": [
+      "https://lh3.googleusercontent.com/aida/AP1WRLtzS8T0wP_R7R_9nK9zQ8",
+      "https://lh3.googleusercontent.com/aida/AP1WRLuzS8T0wP_R7R_9nK9zQ8"
+    ]
+  },
+  {
+    "id": "task-2",
+    "title": "Q4 Architectural Audit",
+    "description": "Audit system latency, memory allocation spikes, and optimize microservice database connection pools for v2 release.",
+    "project": "SYSTEM PERFORMANCE",
+    "category": "Engineering Core",
+    "priority": "CRITICAL",
+    "status": "In Progress",
+    "dueDate": "Today",
+    "dueTime": "2:00 PM",
+    "progressPercent": 75,
+    "isUrgent": true,
+    "subtasks": [
+      {
+        "id": "st-201",
+        "title": "Profile API gateway response times",
+        "completed": true
+      },
+      {
+        "id": "st-202",
+        "title": "Verify connection pool recycling",
+        "completed": true
+      },
+      {
+        "id": "st-203",
+        "title": "Benchmark Redis caching strategy",
+        "completed": true
+      },
+      {
+        "id": "st-204",
+        "title": "Stress test GraphQL endpoint",
+        "completed": false
+      },
+      {
+        "id": "st-205",
+        "title": "Security audit on auth middleware",
+        "completed": false
+      },
+      {
+        "id": "st-206",
+        "title": "Deploy load testing cluster",
+        "completed": false
+      },
+      {
+        "id": "st-207",
+        "title": "Document memory optimization report",
+        "completed": false
+      },
+      {
+        "id": "st-208",
+        "title": "Finalize sign-off with DevOps",
+        "completed": false
+      }
+    ],
+    "attachments": [
+      {
+        "id": "att-201",
+        "name": "Benchmark_Results.pdf",
+        "size": "3.1 MB",
+        "type": "pdf"
+      }
+    ],
+    "comments": [
+      {
+        "id": "c-201",
+        "author": "DevOps Lead",
+        "avatar": "https://lh3.googleusercontent.com/aida/AP1WRLu1qPnrNIRlcoJljI43EI2Q2pf2udFhnjuTuIBpJ6M77oZAvrDSct0UuJPJB-VVn1XmwoCYgbHGFmk661T5NTm7QM5QPauqmEeBwi98hfPFaead6L5xiF9XJfIGlWi8acebXHeP43mJyIcu3ihJoLiSIH6TD-FKJS6SzT9cThqhGI1i6QROwowdjeNbyLt8iyQbGiM5BhKcUkdBGw7KYycB7KwkZzgkbW2LzvaUQ63RINJ1Z5jms4mu5SIZ",
+        "text": "Latency dropped by 34% after Redis cluster patch.",
+        "timestamp": "25m ago"
+      }
+    ],
+    "collaborators": [
+      "https://lh3.googleusercontent.com/aida/AP1WRLu1qPnrNIRlcoJljI43EI2Q2pf2udFhnjuTuIBpJ6M77oZAvrDSct0UuJPJB-VVn1XmwoCYgbHGFmk661T5NTm7QM5QPauqmEeBwi98hfPFaead6L5xiF9XJfIGlWi8acebXHeP43mJyIcu3ihJoLiSIH6TD-FKJS6SzT9cThqhGI1i6QROwowdjeNbyLt8iyQbGiM5BhKcUkdBGw7KYycB7KwkZzgkbW2LzvaUQ63RINJ1Z5jms4mu5SIZ"
+    ]
+  },
+  {
+    "id": "task-3",
+    "title": "Client Feedback Synthesis",
+    "description": "Consolidate qualitative feedback from top enterprise customers into structured design requirements.",
+    "project": "PRODUCT ROADMAP",
+    "category": "Strategy & Ops",
+    "priority": "HIGH",
+    "status": "In Progress",
+    "dueDate": "Tomorrow",
+    "dueTime": "5:30 PM",
+    "progressPercent": 80,
+    "isUrgent": false,
+    "subtasks": [
+      {
+        "id": "st-301",
+        "title": "Extract insights from 15 client calls",
+        "completed": true
+      },
+      {
+        "id": "st-302",
+        "title": "Group friction points into themes",
+        "completed": true
+      },
+      {
+        "id": "st-303",
+        "title": "Map requested feature velocity",
+        "completed": true
+      },
+      {
+        "id": "st-304",
+        "title": "Draft executive summary",
+        "completed": true
+      },
+      {
+        "id": "st-305",
+        "title": "Review with Product Director",
+        "completed": false
+      }
+    ],
+    "attachments": [
+      {
+        "id": "att-301",
+        "name": "Client_Transcript_Notes.pdf",
+        "size": "1.8 MB",
+        "type": "pdf"
+      }
+    ],
+    "comments": [],
+    "collaborators": [
+      "https://lh3.googleusercontent.com/aida/AP1WRLtzS8T0wP_R7R_9nK9zQ8",
+      "https://lh3.googleusercontent.com/aida/AP1WRLuzS8T0wP_R7R_9nK9zQ8"
+    ]
+  },
+  {
+    "id": "task-4",
+    "title": "Quarterly Report & Analytics",
+    "description": "Prepare Q3 performance metrics, team velocity trends, and resource distribution for board presentation.",
+    "project": "EXECUTIVE DISPATCH",
+    "category": "Finance & Growth",
+    "priority": "CRITICAL",
+    "status": "To Do",
+    "dueDate": "Overdue",
+    "dueTime": "11:00 AM",
+    "progressPercent": 20,
+    "isUrgent": true,
+    "subtasks": [
+      {
+        "id": "st-401",
+        "title": "Pull raw velocity metrics from DB",
+        "completed": true
+      },
+      {
+        "id": "st-402",
+        "title": "Generate high-res charts",
+        "completed": false
+      },
+      {
+        "id": "st-403",
+        "title": "Draft narrative slide deck",
+        "completed": false
+      }
+    ],
+    "attachments": [
+      {
+        "id": "att-401",
+        "name": "Financial_Spreadsheet.pdf",
+        "size": "2.4 MB",
+        "type": "pdf"
+      },
+      {
+        "id": "att-402",
+        "name": "Q3_Chart_Export.png",
+        "size": "1.9 MB",
+        "type": "image",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDbsZe9klJiYa1L-Ehhl5pXVWYa9du7WPn65d_dPggKQWYYMTzGPHitnO-g_y83vXGNwAnB5l8H5NXlmwL9C1D7M1ik1DN34wn-ZFgmXo9KQ5YV-p-FRswK05tlqlGIuC1RD8-ZuJ7puTNxIhkgzzIRhoV7usCv5ldjpXzcyglfkPGh1xKGWmuk5ShG9p8B8mhXCXQQ9c3jNlcSZWsOLUkcj9PKoquYGL1zoqR48qk1D_yKkJhDLE7QNuHcAyTKHkHbJIXpRZA2iYtT"
+      }
+    ],
+    "comments": [
+      {
+        "id": "c-401",
+        "author": "VP Operations",
+        "avatar": "https://lh3.googleusercontent.com/aida/AP1WRLu1qPnrNIRlcoJljI43EI2Q2pf2udFhnjuTuIBpJ6M77oZAvrDSct0UuJPJB-VVn1XmwoCYgbHGFmk661T5NTm7QM5QPauqmEeBwi98hfPFaead6L5xiF9XJfIGlWi8acebXHeP43mJyIcu3ihJoLiSIH6TD-FKJS6SzT9cThqhGI1i6QROwowdjeNbyLt8iyQbGiM5BhKcUkdBGw7KYycB7KwkZzgkbW2LzvaUQ63RINJ1Z5jms4mu5SIZ",
+        "text": "Board meeting starts at 3pm, need slides ready by noon.",
+        "timestamp": "2h ago"
+      }
+    ],
+    "collaborators": [
+      "https://lh3.googleusercontent.com/aida/AP1WRLu1qPnrNIRlcoJljI43EI2Q2pf2udFhnjuTuIBpJ6M77oZAvrDSct0UuJPJB-VVn1XmwoCYgbHGFmk661T5NTm7QM5QPauqmEeBwi98hfPFaead6L5xiF9XJfIGlWi8acebXHeP43mJyIcu3ihJoLiSIH6TD-FKJS6SzT9cThqhGI1i6QROwowdjeNbyLt8iyQbGiM5BhKcUkdBGw7KYycB7KwkZzgkbW2LzvaUQ63RINJ1Z5jms4mu5SIZ"
+    ]
+  },
+  {
+    "id": "task-5",
+    "title": "Internal Styleguide Cleanup",
+    "description": "Remove legacy CSS utility classes and streamline color token usages across mobile views.",
+    "project": "DESIGN INFRASTRUCTURE",
+    "category": "Maintenance",
+    "priority": "LOW",
+    "status": "Completed",
+    "dueDate": "Oct 28",
+    "progressPercent": 100,
+    "subtasks": [
+      {
+        "id": "st-501",
+        "title": "Deprecate old hex codes",
+        "completed": true
+      },
+      {
+        "id": "st-502",
+        "title": "Verify mobile dark mode contrast",
+        "completed": true
+      }
+    ],
+    "attachments": [],
+    "comments": [],
+    "collaborators": []
+  }
+]
